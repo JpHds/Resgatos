@@ -1,0 +1,1 @@
+./mvnw springboot:start
