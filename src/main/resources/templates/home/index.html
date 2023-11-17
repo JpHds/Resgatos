@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/home-css/home.css">
+    <title>Resgatos</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/4.6.0/css/bootstrap.min.css">
+</head>
+
+<body>
+    <header>
+        <nav class="nav-bar">
+            <div class="logo">
+                <img src="/img/logo2.png" alt="logo">
+            </div>
+            <div class="nav-list">
+                <ul>
+                    <li class="nav-item"><a href="#" class="nav-link">Início</a></li>
+                    <li class="nav-item"><a href="#" class="nav-link">Resgate</a></li>
+                    <li class="nav-item"><a href="#" class="nav-link">Sobre</a></li>
+                </ul>
+            </div>
+            <div class="login-button">
+                <button><a href="/login">Entrar</a></button>
+            </div>
+
+            <div class="mobile-menu-icon">
+                <button onclick="menuShow()"><img class="icon" src="/img/menu_white_36dp.svg" alt=""></button>
+            </div>
+        </nav>
+        <div class="mobile-menu">
+            <ul>
+                <li class="nav-item"><a href="#" class="nav-link">Início</a></li>
+                <li class="nav-item"><a href="#" class="nav-link">Resgate</a></li>
+                <li class="nav-item"><a href="#" class="nav-link">Sobre</a></li>
+            </ul>
+
+            <div class="login-button">
+                <button><a href="#">Entrar</a></button>
+            </div>
+        </div>
+    </header>
+    <main>
+        <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+            <ol class="carousel-indicators">
+                <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+                <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+                <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+            </ol>
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <a href="pagina1.html">
+                        <img src="/img/1.png" class="d-block w-100" alt="Gato 1">
+                    </a>
+                </div>
+                <div class="carousel-item">
+                    <a href="pagina2.html">
+                        <img src="/img/2.png" class="d-block w-100" alt="Gato 2">
+                    </a>
+                </div>
+                <div class="carousel-item">
+                    <a href="pagina3.html">
+                        <img src="/img/3.png" class="d-block w-100" alt="Gato 3">
+                    </a>
+                </div>
+            </div>
+            <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="sr-only">Previous</span>
+            </a>
+            <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="sr-only">Next</span>
+            </a>
+        </div>
+    </main>
+    
+
+<!-- corpo-->
+
+<div class="conteudo">
+    <div class="overlay"></div>
+    <div class="content">
+        <h2>O QUE É A RESGATOS?</h2>
+        <p>Resgatos é uma iniciativa sem fins lucrativos. Somos alunos da UNINASSAU/SE e fizemos esse trabalho com intuito de ajudar animais abandonados e vítimas de maus-tratos a terem uma vida com respeito e amor.</p>
+        <button class="ajudar-button" onclick="redirecionarParaPaginaDois()">Quero Ajudar</button>
+    </div>
+    </div>
+</div>
+
+<!-- CONTEUDO 2 -->
+<div class="conteudo2">
+    <div class="acao-container">
+        <div class="acao1">
+            <img src="/img/doacao.png" alt="Ícone Doar" width="80">
+            <h3>Faça uma doação para ONGs parceiras</h3>
+            <p>Com as doações, as ONGs conseguem cuidar de animais carentes, potencializar os projetos, criar campanhas de conscientização e desenvolver ações especiais. </p>
+            <button class="acao-button">Quero Doar</button>
+        </div>
+        <div class="acao2">
+            <img src="/img/ambulancia.png" alt="Ícone Resgatar" width="80">
+            <h3>Resgate uma vida</h3>
+            <p>Você pode cuidar de uma vida sem precisar adotar. RESGATE! Nos envie fotos e localição de Gatinhos em risco para que uma ONG ou um padrinho consiga resgatar essa vida.</p>
+            <button class="acao-button">Quero Resgatar</button>
+        </div>
+        <div class="acao3">
+            <img src="/img/adote.png" alt="Ícone Adotar" width="80">
+            <h3>Adote um amigo</h3>
+            <p>ADOTE! Adotar é um gesto de amor! É dar a chance de um animalzinho ter uma família e a oportunidade de ser recompensado diariamente com muito amor!</p>
+            <button class="acao-button">Quero Adotar</button>
+        </div>
+    </div>
+</div>
+
+
+
+<!-- rodapé-->
+
+    <footer>
+        <div class="social-icons">
+            <a href="#" class="icon"><img src="/img/facebook.png" alt="Facebook"></a>
+            <a href="#" class="icon"><img src="/img/instagram.png" alt="Instagram"></a>
+            <a href="#" class="icon"><img src="/img/twitter.png" alt="Twitter"></a>
+            <a href="#" class="icon"><img src="/img/youtube.png" alt="YouTube"></a>
+        </div>
+        <div class="copyright">
+            &copy; 2023 Resgatos
+        </div>
+    </footer>
+
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/4.6.0/js/bootstrap.min.js"></script>
+<script src="/js/script.js"></script> 
+</body>
+</html>
