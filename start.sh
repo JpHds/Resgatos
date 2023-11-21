@@ -1,1 +1,1 @@
-./mvnw springboot:start
+./mvnw spring-boot:start
