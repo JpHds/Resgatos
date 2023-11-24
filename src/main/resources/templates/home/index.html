@@ -5,9 +5,11 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="/css/home-css/home.css">
     <title>Resgatos</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/4.6.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/css/home-css/home.css">
+    <link rel="stylesheet" href="/css/footer.css">
+    <link rel="stylesheet" href="/css/home-css/scroll-animation.css">
 </head>
 
 <body>
@@ -18,28 +20,30 @@
             </div>
             <div class="nav-list">
                 <ul>
-                    <li class="nav-item"><a href="#" class="nav-link">Início</a></li>
-                    <li class="nav-item"><a href="#" class="nav-link">Resgate</a></li>
-                    <li class="nav-item"><a href="#" class="nav-link">Sobre</a></li>
+                    <li class="nav-item"><a href="" class="nav-link">Início</a></li>
+                    <li class="nav-item"><a href="/shelters" class="nav-link">Resgate</a></li>
+                    <li class="nav-item"><a href="#sobre" class="nav-link" id="linkSobre">Sobre</a></li>
                 </ul>
             </div>
             <div class="login-button">
-                <button><a href="/login">Entrar</a></button>
+                <a href="/login"><button th:if="${name == null}">Entrar</button></a>
+                <button th:if="${name != null}" class="welcome-btn">Bem-vindo, <span th:text="${name}"></span>!</button>
+                <button th:if="${name != null}" id="btn-exit" data-toggle="modal" data-target="#exit-modal">Sair</button>
             </div>
-
             <div class="mobile-menu-icon">
                 <button onclick="menuShow()"><img class="icon" src="/img/menu_white_36dp.svg" alt=""></button>
             </div>
         </nav>
         <div class="mobile-menu">
             <ul>
-                <li class="nav-item"><a href="#" class="nav-link">Início</a></li>
-                <li class="nav-item"><a href="#" class="nav-link">Resgate</a></li>
-                <li class="nav-item"><a href="#" class="nav-link">Sobre</a></li>
+                <li class="nav-item"><a href="/" class="nav-link">Início</a></li>
+                <li class="nav-item"><a href="/shelters" class="nav-link">Resgate</a></li>
+                <li class="nav-item"><a href="#sobre" class="nav-link">Sobre</a></li>
             </ul>
 
             <div class="login-button">
-                <button><a href="#">Entrar</a></button>
+                <a href="/login"><button th:if="${name == null}">Entrar</button></a>
+                <a href="/logout"><button style="background-color: rgb(160, 50, 50);" th:if="${name != null}">Sair</button></a>
             </div>
         </div>
     </header>
@@ -52,19 +56,13 @@
             </ol>
             <div class="carousel-inner">
                 <div class="carousel-item active">
-                    <a href="pagina1.html">
-                        <img src="/img/1.png" class="d-block w-100" alt="Gato 1">
-                    </a>
+                    <img src="/img/1.png" class="d-block w-100" alt="Gato 1">
                 </div>
                 <div class="carousel-item">
-                    <a href="pagina2.html">
-                        <img src="/img/2.png" class="d-block w-100" alt="Gato 2">
-                    </a>
+                    <img src="/img/2.png" class="d-block w-100" alt="Gato 2">
                 </div>
                 <div class="carousel-item">
-                    <a href="pagina3.html">
-                        <img src="/img/3.png" class="d-block w-100" alt="Gato 3">
-                    </a>
+                    <img src="/img/3.png" class="d-block w-100" alt="Gato 3">
                 </div>
             </div>
             <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
@@ -81,36 +79,36 @@
 
 <!-- corpo-->
 
-<div class="conteudo">
+<div class="conteudo anime" id="sobre">
     <div class="overlay"></div>
     <div class="content">
         <h2>O QUE É A RESGATOS?</h2>
         <p>Resgatos é uma iniciativa sem fins lucrativos. Somos alunos da UNINASSAU/SE e fizemos esse trabalho com intuito de ajudar animais abandonados e vítimas de maus-tratos a terem uma vida com respeito e amor.</p>
-        <button class="ajudar-button" onclick="redirecionarParaPaginaDois()">Quero Ajudar</button>
+        <button id="redirectToWhatsapp" class="ajudar-button">Quero Ajudar</button>
     </div>
     </div>
 </div>
 
 <!-- CONTEUDO 2 -->
-<div class="conteudo2">
+<div class="conteudo2 anime">
     <div class="acao-container">
         <div class="acao1">
             <img src="/img/doacao.png" alt="Ícone Doar" width="80">
-            <h3>Faça uma doação para ONGs parceiras</h3>
+            <h3>Faça uma doação</h3>
             <p>Com as doações, as ONGs conseguem cuidar de animais carentes, potencializar os projetos, criar campanhas de conscientização e desenvolver ações especiais. </p>
-            <button class="acao-button">Quero Doar</button>
+            <a href="/donate"><button class="acao-button">Quero Doar</button></a>
         </div>
         <div class="acao2">
             <img src="/img/ambulancia.png" alt="Ícone Resgatar" width="80">
             <h3>Resgate uma vida</h3>
             <p>Você pode cuidar de uma vida sem precisar adotar. RESGATE! Nos envie fotos e localição de Gatinhos em risco para que uma ONG ou um padrinho consiga resgatar essa vida.</p>
-            <button class="acao-button">Quero Resgatar</button>
+            <a href="/shelters"><button class="acao-button">Quero Resgatar</button></a>
         </div>
         <div class="acao3">
             <img src="/img/adote.png" alt="Ícone Adotar" width="80">
             <h3>Adote um amigo</h3>
             <p>ADOTE! Adotar é um gesto de amor! É dar a chance de um animalzinho ter uma família e a oportunidade de ser recompensado diariamente com muito amor!</p>
-            <button class="acao-button">Quero Adotar</button>
+            <a href="/shelters"><button class="acao-button">Quero Adotar</button></a>
         </div>
     </div>
 </div>
@@ -135,5 +133,26 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/4.6.0/js/bootstrap.min.js"></script>
 <script src="/js/script.js"></script> 
+<script src="/js/scroll-animation.js"></script>
 </body>
+
+<!--Modal para confirmar saída-->
+
+<div class="modal fade" id="exit-modal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel"
+    aria-hidden="true">
+    <div class="modal-dialog modal-sm" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h4 class="modal-title w-100" id="myModalLabel">Confirmar saída?</h4>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-footer">
+          <a type="button" class="btn-confirm-exit" href="/logout">Confirmar</a>
+          <button type="button" class="btn-cancel-exit" data-dismiss="modal">Cancelar</button>
+        </div>
+      </div>
+    </div>
+  </div>
 </html>

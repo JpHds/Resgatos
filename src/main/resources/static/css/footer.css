@@ -1,0 +1,14 @@
+footer {
+    background-color: #24252a;
+    color: #fff;
+    padding: 10px 50px;
+    text-align: center;
+    position: relative;
+}
+
+.copyright {
+    font-size: 0.8rem;
+    position: relative;
+    z-index: 1;
+    margin-top: 20px;
+}

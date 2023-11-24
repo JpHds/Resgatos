@@ -1,3 +1,5 @@
+// Função para exibir o menu mobile
+
 function menuShow() {
     let menuMobile = document.querySelector('.mobile-menu');
     if (menuMobile.classList.contains('open')) {
@@ -9,9 +11,13 @@ function menuShow() {
     }
 }
 
-function redirectPage(url) {
-    window.location.href = url;
+// Função para redirecionar usuário para o whatsapp com mensagem automática
+
+function sendMessage() {
+    window.open('https://api.whatsapp.com/send/?phone=%2B5579988222654&text=Olá,%20quero%20me%20voluntariar!%20:D&type=phone_number&app_absent=0');
 }
-function redirecionarParaPaginaDois() {
-    window.location.href = 'pagina2.html'; // Substitua 'pagina2.html' pelo caminho real da sua página dois
-}
+
+document.addEventListener("DOMContentLoaded", function() {
+    var botao = document.getElementById("redirectToWhatsapp");
+    botao.addEventListener("click", sendMessage);
+});

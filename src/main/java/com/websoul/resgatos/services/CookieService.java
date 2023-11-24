@@ -26,7 +26,10 @@ public class CookieService {
             .map(e -> e.getValue())
             .orElse(null);
 
-            value = URLDecoder.decode(value, "utf-8");
+            if(value != null) {
+                value = URLDecoder.decode(value, "utf-8");
+            }
+            
             return value;
     }
 }

@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/shelters-css/shelters.css">
+    <title>Resgato - Abrigos </title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/4.6.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/css/footer.css">
+</head>
+
+<body>
+    <header>
+        <nav class="nav-bar">
+            <div class="logo">
+                <img src="/img/logo2.png" alt="logo">
+            </div>
+            <div class="nav-list">
+                <ul>
+                    <li class="nav-item"><a href="/" class="nav-link">Início</a></li>
+                    <li class="nav-item"><a href="/shelters" class="nav-link">Resgate</a></li>
+                    <li class="nav-item"><a href="/#sobre" class="nav-link" id="linkSobre">Sobre</a></li>
+                </ul>
+            </div>
+            <div class="login-button">
+                <a href="/login"><button th:if="${name == null}">Entrar</button></a>
+                <button th:if="${name != null}" class="welcome-btn">Bem-vindo, <span th:text="${name}"></span>!</button>
+                <button th:if="${name != null}" id="btn-exit" data-toggle="modal" data-target="#exit-modal">Sair</button>
+            </div>
+
+            <div class="mobile-menu-icon">
+                <button onclick="menuShow()"><img class="icon" src="/img/menu_white_36dp.svg" alt=""></button>
+            </div>
+        </nav>
+        <div class="mobile-menu">
+            <ul>
+                <li class="nav-item"><a href="/" class="nav-link">Início</a></li>
+                <li class="nav-item"><a href="/shelters" class="nav-link">Resgate</a></li>
+                <li class="nav-item"><a href="/#sobre" class="nav-link">Sobre</a></li>
+            </ul>
+
+            <div class="login-button">
+                <a href="/login"><button th:if="${name == null}">Entrar</button></a>
+                <a href="/logout"><button style="background-color: rgb(160, 50, 50);" th:if="${name != null}">Sair</button></a>
+            </div>
+        </div>
+    </header>
+    
+    <div class="content">
+        <h1>Voce pode <span>ADOTAR</span> ou fazer uma <span>DOAÇÃO</span> para um desses abrigos de Aracaju</h1>
+        <div class="abrigos">
+                <div class="img-abrigo">
+                    <a href="https://www.instagram.com/adasfa.sergipe/" target="_blank">
+                        <img src="/img/abrigos/adasfa.png" alt="Adasfa">
+                        <figcaption>Associação Defensora dos Animais São Francisco de Assis</figcaption>
+                    </a>
+                </div>
+
+                <div class="img-abrigo">
+                    <a href="https://www.instagram.com/amigosdepatasof_/" target="_blank">
+                        <img src="/img/abrigos/amigosdepatas.webp" alt="Amigos de Patas">
+                        <figcaption>Amigos de patas</figcaption>
+                    </a>
+                </div>
+
+                <div class="img-abrigo">
+                    <a href="https://www.instagram.com/projeto.manjedoura.aju/" target="_blank">
+                        <img src="/img/abrigos/manjedoura.png" alt="Manjedoura">
+                        <figcaption>Projeto manjedoura</figcaption>
+                    </a>
+                </div>
+            </a>
+        </div>
+    </div>
+</body>
+<!-- rodapé-->
+
+    <footer>
+        <div class="social-icons">
+            <a href="#" class="icon"><img src="/img/facebook.png" alt="Facebook"></a>
+            <a href="#" class="icon"><img src="/img/instagram.png" alt="Instagram"></a>
+            <a href="#" class="icon"><img src="/img/twitter.png" alt="Twitter"></a>
+            <a href="#" class="icon"><img src="/img/youtube.png" alt="YouTube"></a>
+        </div>
+        <div class=" copyright">
+            &copy; 2023 Resgatos
+        </div>
+    </footer>
+
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/4.6.0/js/bootstrap.min.js"></script>
+<script src="/js/script.js"></script>
+
+  <div class="modal fade" id="exit-modal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel"
+    aria-hidden="true">
+    <div class="modal-dialog modal-sm" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h4 class="modal-title w-100" id="myModalLabel">Confirmar saída?</h4>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-footer">
+        <a type="button" class="btn-confirm-exit" href="/logout">Confirmar</a>
+          <button type="button" class="btn-cancel-exit" data-dismiss="modal">Cancelar</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</html>

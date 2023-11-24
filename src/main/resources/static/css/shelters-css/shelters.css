@@ -1,0 +1,211 @@
+/* Adicione estas regras CSS ao seu arquivo style.css */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@200;300;400;500&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+    font-family: 'Inter', sans-serif;
+    list-style-type: none;
+}
+
+body {
+    background-color: #24252a !important;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+header {
+    background-color: #24252a;
+    box-shadow: 0px 3px 10px #464646;
+}
+
+.login-button .welcome-btn {
+    border: none;
+    padding: 10px;
+    border-radius: 5px;
+    background-color: #004aad;
+    color: #fff;
+    cursor: default
+}
+
+.login-button #btn-exit {
+    border: none;
+    padding: 10px;
+    border-radius: 5px;
+    background-color: red;
+    color: #fff;
+}
+
+.nav-bar {
+    display: flex;
+    justify-content: space-between;
+    padding: 5px 50px 20px;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+}
+
+.nav-list {
+    display: flex;
+    align-items: center;
+}
+
+.nav-list ul {
+    display: flex;
+    justify-content: center;
+    list-style: none;
+}
+
+.nav-item {
+    margin: 0 10px;
+    margin-top: 15px;
+}
+
+.nav-link {
+    text-decoration: none;
+    font-size: 1.15rem;
+    color: #fff;
+    font-weight: 400;
+}
+
+.login-button a button {
+    border: none;
+    padding: 10px 15px;
+    border-radius: 5px;
+    background-color: #004aad;
+    margin-top: 15px;
+    color: white;
+    font-size: 1.1rem;
+    font-weight: 500;
+}
+
+.mobile-menu-icon {
+    display: none;
+}
+
+.mobile-menu {
+    display: none;
+}
+
+@media screen and (max-width: 730px) {
+    .nav-bar {
+        padding: 1.5rem 4rem;
+    }
+    .nav-item {
+        display: none;
+    }
+    .login-button {
+        display: none;
+    }
+    .mobile-menu-icon {
+        display: block;
+    }
+    .mobile-menu-icon button {
+        background-color: transparent;
+        border: none;
+        cursor: pointer;
+    }
+    .mobile-menu ul {
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        padding-bottom: 1rem;
+    }
+    .mobile-menu .nav-item {
+        display: block;
+        padding-top: 1.2rem;
+    }
+    .mobile-menu .login-button {
+        display: block;
+        padding: 1rem 2rem;
+    }
+    .mobile-menu .login-button button {
+        width: 100%;
+    }
+    .open {
+        display: block;
+    }
+}
+
+.content {
+    display: grid;
+    justify-content: center;
+    padding: 20px 0;
+}
+
+.content h1 {
+    color: white;
+    text-align: center;
+}
+
+.content h1 span {
+    color: #ffcc00;
+}
+
+.abrigos {
+    display: grid;
+    justify-content: center;
+}
+
+.abrigos img {
+    width: 300px;
+    margin-bottom: 20px;
+}
+
+.abrigos .img-abrigo {
+    margin-bottom: 100px;
+    text-align: center;
+}
+
+.abrigos .img-abrigo a {
+    color: white;
+}
+
+
+
+/* Estilos para os ícones sociais */
+.social-icons {
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
+}
+
+.icon {
+    margin: 0 10px;
+}
+
+.icon img {
+    width: 30px; /* Tamanho dos ícones */
+}
+
+
+.btn-confirm-exit {
+    padding: 5px 16px;
+    background-color: rgb(160, 50, 50);
+    color: white;
+    border: none;
+    border-radius: 5px;
+}
+
+.btn-confirm-exit:hover{
+    text-decoration: none;
+    color: white;
+}
+
+.btn-cancel-exit {
+    padding: 5px 16px;
+    background-color: rgb(143, 143, 143);
+    color: white;
+    border: none;
+    border-radius: 5px;
+}
+
+@media screen and (max-width: 450px) {
+    .logo img {
+        width: 250px;
+    }
+}

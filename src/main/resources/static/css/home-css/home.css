@@ -8,6 +8,10 @@
     list-style-type: none;
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
 header {
     background-color: #24252a;
     box-shadow: 0px 3px 10px #464646;
@@ -51,19 +55,32 @@ header {
     font-weight: 400;
 }
 
-.login-button button {
+.login-button a button {
     border: none;
     padding: 10px 15px;
     border-radius: 5px;
     background-color: #004aad;
     margin-top: 15px;
+    color: white;
+    font-size: 1.1rem;
+    font-weight: 500;
 }
 
-.login-button button a {
-    text-decoration: none;
+.login-button .welcome-btn {
+    border: none;
+    padding: 10px;
+    border-radius: 5px;
+    background-color: #004aad;
     color: #fff;
-    font-weight: 500;
-    font-size: 1.1rem;
+    cursor: default
+}
+
+.login-button #btn-exit {
+    border: none;
+    padding: 10px;
+    border-radius: 5px;
+    background-color: red;
+    color: #fff;
 }
 
 .mobile-menu-icon {
@@ -304,18 +321,39 @@ header {
     width: 30px; /* Tamanho dos ícones */
 }
 
-/* Estilos para o copyright no rodapé */
-footer {
-    background-color: #24252a;
-    color: #fff;
-    padding: 10px 50px;
-    text-align: center;
-    position: relative;
+/* Estilos para o modal de confirmar saída */
+
+.btn-confirm-exit {
+    padding: 5px 16px;
+    background-color: rgb(160, 50, 50);
+    color: white;
+    border: none;
+    border-radius: 5px;
 }
 
-.copyright {
-    font-size: 0.8rem;
-    position: relative;
-    z-index: 1;
-    margin-top: 20px;
+.btn-confirm-exit:hover{
+    text-decoration: none;
+    color: white;
+}
+
+.btn-cancel-exit {
+    padding: 5px 16px;
+    background-color: rgb(143, 143, 143);
+    color: white;
+    border: none;
+    border-radius: 5px;
+}
+
+@media screen and (max-width: 1085px) {
+    .acao-container {
+        display: grid;
+        grid-row: 80%;
+        row-gap: 150px;
+    }
+  }
+
+@media screen and (max-width: 450px) {
+    .logo img {
+        width: 250px;
+    }
 }

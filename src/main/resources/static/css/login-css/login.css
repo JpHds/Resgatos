@@ -70,3 +70,10 @@ html {
 .custom-checkbox .custom-control-input:checked~.custom-control-label::before {
     background-color: #c0392b !important;
 }
+
+@media screen and (max-width: 820px) {
+    .user_card {
+       width: 700px;
+       height: 490px;
+    }
+  }
