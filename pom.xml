@@ -10,7 +10,7 @@
 	</parent>
 	<groupId>com.web-soul</groupId>
 	<artifactId>resgatos</artifactId>
-	<version>0.0.1-SNAPSHOT</version>
+	<version>1.0.1</version>
 	<name>resgatos</name>
 	<description>Aplicação web direcionada a dar auxílio na adoção de gatos.</description>
 	<properties>
