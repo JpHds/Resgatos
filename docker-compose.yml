@@ -1,0 +1,17 @@
+version: '3.8'
+
+services:
+  app:
+    build:
+      context: .  # Define a raiz do projeto como contexto de build
+      dockerfile: Dockerfile  # Nome do Dockerfile
+    container_name: spring_app
+    ports:
+      - "8080:8080"  # Porta para acessar a aplicação
+    environment:
+      SPRING_DATASOURCE_URL: jdbc:mysql://host.docker.internal:3306/users?useTimezone=true&serverTimezone=UTC
+      SPRING_DATASOURCE_USERNAME: root
+      SPRING_DATASOURCE_PASSWORD: 32549732#Jp
+
+volumes:
+  db_data:
