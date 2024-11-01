@@ -1,5 +1,3 @@
-version: '3.8'
-
 services:
   app:
     build:
@@ -12,6 +10,3 @@ services:
       SPRING_DATASOURCE_URL: jdbc:mysql://host.docker.internal:3306/users?useTimezone=true&serverTimezone=UTC
       SPRING_DATASOURCE_USERNAME: root
       SPRING_DATASOURCE_PASSWORD: 32549732#Jp
-
-volumes:
-  db_data:
